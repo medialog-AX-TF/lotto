@@ -3,6 +3,8 @@ import os
 import socket
 import json
 
+
+
 app = Flask(__name__)
 
 # 참석자 데이터 파일 경로

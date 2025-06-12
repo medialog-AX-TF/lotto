@@ -14,6 +14,7 @@ from PySide6.QtGui import QFont, QColor, QPalette, QPixmap
 import subprocess
 
 # 참석자 데이터 파일 경로
+
 PARTICIPANTS_FILE = 'participants.json'
 
 # 서버 IP 주소 및 포트 고정

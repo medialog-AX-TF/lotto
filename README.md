@@ -55,6 +55,18 @@ python main.py
 - ngrok 무료 플랜은 일정 시간이 지나면 연결이 끊길 수 있습니다. 연결이 끊기면 ngrok을 재실행하고, 새로 발급된 URL을 사용하세요.
 - 회사 방화벽 정책에 따라 ngrok 사용이 제한될 수 있습니다.
 
+### 6. ngrok URL 설정 파일로 관리
+- ngrok URL은 프로젝트 폴더의 config.json 파일에서 관리할 수 있습니다.
+- config.json 파일 예시:
+```
+{
+  "ngrok_url": "https://xxxx-xxxx-xxxx.ngrok-free.app"
+}
+```
+- "ngrok_url" 항목에 QR코드에 표시할 ngrok 주소를 입력하세요.
+- ngrok 주소가 바뀌면 config.json 파일의 ngrok_url 값을 수정하세요.
+- 프로그램을 재시작하면 새로운 URL이 자동으로 반영됩니다.
+
 ## 사용 방법
 1. 프로그램을 실행합니다.
 2. 참석자 이름을 직접 입력하거나 텍스트/CSV 파일을 불러옵니다.

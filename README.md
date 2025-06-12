@@ -120,7 +120,7 @@ MIT License
 이 프로그램은 커서 AI의 도움을 받아 개발되었습니다.
 
 ## 연락처
-문의사항이 있으시면  최프로 choipro@medialog.co.kr  로 연락해 주세요. 
+문의사항은   최프로 choipro@medialog.co.kr  로 연락해 주세요. 
 
 
 # 커서 AI 시퀀스 다이어그램

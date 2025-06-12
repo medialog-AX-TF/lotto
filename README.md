@@ -1,4 +1,4 @@
-# 커서 AI 발표 추첨 프로그램
+# 커서 AI 로 개발한  추첨 프로그램
 
 ## 소개
 이 프로그램은 커서 AI 발표 자리에서 약 40명의 참석자들을 대상으로 추첨을 통해 선물을 증정하기 위한 도구입니다. 간단하고 공정한 추첨 과정을 통해 참석자들에게 즐거운 경험을 제공합니다.
@@ -15,10 +15,10 @@
 ## 설치 방법
 ```bash
 # 저장소 복제
-git clone https://github.com/yourusername/cursor-ai-lottery.git
+git clone https://github.com/medialog-AX-TF/lotto
 
 # 디렉토리 이동
-cd cursor-ai-lottery
+cd lotto
 
 # 필요한 패키지 설치
 pip install -r requirements.txt
@@ -26,6 +26,31 @@ pip install -r requirements.txt
 # 프로그램 실행
 python main.py
 ```
+
+## 외부 접속(ngrok) 사용법
+회사 내부 PC에서 외부 접속이 불가능한 경우, ngrok을 사용하여 외부에서도 참석자 등록 페이지에 접속할 수 있습니다.
+
+### 1. ngrok 다운로드
+- https://ngrok.com/download 에서 Windows용 ngrok을 다운로드합니다.
+- 다운로드한 ngrok.exe 파일을 본 프로젝트 폴더에 위치시킵니다.
+
+### 2. ngrok 실행
+아래 명령어로 5000번 포트를 외부에 노출합니다.
+```bash
+./ngrok.exe http 5000
+```
+
+### 3. 외부 접속 URL 확인
+- ngrok 실행 후 터미널에 표시되는 `https://xxxx-xxxx-xxxx.ngrok-free.app`와 같은 URL을 확인합니다.
+- 이 URL이 외부에서 참석자 등록에 사용할 주소입니다.
+
+### 4. 프로그램 연동
+- 프로그램 내 QR 코드 및 안내 메시지에 ngrok URL이 자동으로 사용됩니다.
+- 만약 ngrok URL이 바뀌면 프로그램을 재시작하거나, QR 코드 다이얼로그를 다시 열어 최신 URL이 반영되었는지 확인하세요.
+
+### 5. 주의사항
+- ngrok 무료 플랜은 일정 시간이 지나면 연결이 끊길 수 있습니다. 연결이 끊기면 ngrok을 재실행하고, 새로 발급된 URL을 사용하세요.
+- 회사 방화벽 정책에 따라 ngrok 사용이 제한될 수 있습니다.
 
 ## 사용 방법
 1. 프로그램을 실행합니다.

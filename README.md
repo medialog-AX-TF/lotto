@@ -38,7 +38,13 @@ python main.py
 - 다운로드한 ngrok.exe 파일을 본 프로젝트 폴더에 위치시킵니다.
 
 ### 2. ngrok 실행
-아래 명령어로 5000번 포트를 외부에 노출합니다.
+먼저 ngrok 인증 토큰을 등록해야 합니다. 아래 명령어를 실행하세요.
+```bash
+./ngrok.exe config add-authtoken 2rhY0HxZN4jqBZcRHLJ7rn4awDl_2CE7WsvW3YqK1BLgVZkPk
+```
+(토큰은 ngrok 회원가입 후 https://dashboard.ngrok.com/get-started/your-authtoken 에서 확인할 수 있습니다.)
+
+그 다음 아래 명령어로 ngrok을 실행합니다.
 ```bash
 ./ngrok.exe http 5000
 ```

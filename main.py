@@ -23,7 +23,12 @@ SERVER_PORT = 5000
 SERVER_URL = f"http://{SERVER_IP}:{SERVER_PORT}"
 
 # 외부 접속용 ngrok URL (QR 코드에 사용)
-NGROK_URL = "https://0e71-13-124-14-57.ngrok-free.app"
+try:
+    with open('config.json', 'r', encoding='utf-8') as f:
+        config = json.load(f)
+        NGROK_URL = config.get('ngrok_url', "https://0e71-13-124-14-57.ngrok-free.app")
+except Exception:
+    NGROK_URL = "https://0e71-13-124-14-57.ngrok-free.app"
 
 class QRCodeDialog(QDialog):
     def __init__(self, url, parent=None):
@@ -74,7 +79,7 @@ class QRCodeDialog(QDialog):
 class LotteryApp(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("행사 참여자 이벤트 추첨 !!")
+        self.setWindowTitle("기업/솔루션 담당 행사 참여자 이벤트 추첨 !!")
         self.setMinimumSize(800, 600)
         
         # 참석자 목록
@@ -100,7 +105,7 @@ class LotteryApp(QMainWindow):
         main_layout.setSpacing(20)
         
         # 제목
-        title_label = QLabel("행사 참여자 이벤트 추첨 !!")
+        title_label = QLabel("기업/솔루션 담당 행사 참여자 이벤트 추첨 !!")
         title_font = QFont("맑은 고딕", 24, QFont.Weight.Bold)
         title_label.setFont(title_font)
         title_label.setAlignment(Qt.AlignmentFlag.AlignCenter)

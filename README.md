@@ -73,6 +73,10 @@ python main.py
 - ngrok 주소가 바뀌면 config.json 파일의 ngrok_url 값을 수정하세요.
 - 프로그램을 재시작하면 새로운 URL이 자동으로 반영됩니다.
 
+## ngrok 실행 예시 화면
+
+![ngrok 실행 예시](images/ngrok_example.png)
+
 ## 사용 방법
 1. 프로그램을 실행합니다.
 2. 참석자 이름을 직접 입력하거나 텍스트/CSV 파일을 불러옵니다.

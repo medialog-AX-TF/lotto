@@ -20,8 +20,11 @@ git clone https://github.com/medialog-AX-TF/lotto
 # 디렉토리 이동
 cd lotto
 
-# 필요한 패키지 설치
+python  -m venv venv
+.\venv\Scripts\activate
+pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
+
 
 # 프로그램 실행
 python main.py
@@ -90,3 +93,5 @@ MIT License
 
 ## 연락처
 문의사항이 있으시면 [이메일 주소]로 연락해 주세요. 
+
+# 예시: python3.10이 설치되어 있다는 가정
